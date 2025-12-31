@@ -1,30 +1,49 @@
+/* Reset */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Georgia, serif;
-  background: #ffffff;
-  color: #111;
-}
-
-header {
-  text-align: center;
-  padding: 32px 12px;
-}
-
-.map {
-  width: 100vw;
-  height: 85vh;
-  margin: 0;
-  padding: 0;
-}
-
-.map iframe {
-  width: 100%;
+html, body {
   height: 100%;
-  border: 0;
-  display: block;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Title Overlay */
+.overlay-title {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Map Container */
+.map-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Map iframe */
+.map-container iframe {
+  width: 100%;
+  height: 110%;        /* hides Google top bar */
+  border: none;
+  pointer-events: auto;
+  transform: translateY(-50px); /* pushes owner info out of view */
 }
