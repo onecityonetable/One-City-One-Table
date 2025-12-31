@@ -1,5 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  padding: 0;
   font-family: Georgia, serif;
   background: #ffffff;
   color: #111;
@@ -11,17 +16,15 @@ header {
 }
 
 .map {
-  width: 100%;
-  height: 80vh;
+  width: 100vw;
+  height: 85vh;
+  margin: 0;
+  padding: 0;
 }
 
 .map iframe {
   width: 100%;
   height: 100%;
   border: 0;
-}
-
-section {
-  padding: 48px 20px;
-  text-align: center;
+  display: block;
 }
