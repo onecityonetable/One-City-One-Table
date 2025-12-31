@@ -1,37 +1,21 @@
-/* Reset */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* FORCE FULL SCREEN */
 html, body {
+  width: 100%;
   height: 100%;
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Title Overlay */
-.overlay-title {
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-
-  background: rgba(0, 0, 0, 0.55);
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 30px;
-
-  font-size: 20px;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-/* Map Container */
-.map-container {
-  position: fixed;
+/* MAP WRAPPER */
+.map-wrapper {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
@@ -39,11 +23,29 @@ html, body {
   overflow: hidden;
 }
 
-/* Map iframe */
-.map-container iframe {
+/* MAP IFRAME */
+.map-wrapper iframe {
   width: 100%;
-  height: 110%;        /* hides Google top bar */
+  height: 120%;              /* hides Google top UI */
   border: none;
-  pointer-events: auto;
-  transform: translateY(-50px); /* pushes owner info out of view */
+  transform: translateY(-60px);
+}
+
+/* TITLE OVERLAY */
+.overlay-title {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 40px;
+
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  white-space: nowrap;
 }
